@@ -51,8 +51,7 @@ def test_signup_nonexistent_activity():
     assert response.status_code == 404
     assert "Activity not found" in response.json()["detail"]
 
-# The following test will fail until the unregister endpoint is implemented
-@pytest.mark.skip(reason="Unregister endpoint not implemented yet")
+
 def test_unregister_success():
     # Arrange
     email = "testuser4@mergington.edu"
